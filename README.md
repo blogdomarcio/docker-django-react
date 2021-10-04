@@ -1,2 +1,2 @@
 # docker-django-react-nginx
-Docker Django (Backend) e React (Frontend)
+React (Nginx) with Django API (gunicorn)
