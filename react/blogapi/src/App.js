@@ -12,7 +12,7 @@ function App() {
 
 	useEffect(() => {
 		setAppState({ loading: true });
-		const apiUrl = `http://127.0.0.1/api/`;
+		const apiUrl = `http://204.48.16.104/api/`;
 		fetch(apiUrl)
 			.then((data) => data.json())
 			.then((posts) => {
