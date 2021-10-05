@@ -22,5 +22,14 @@ services:
     depends_on:
       - backend
       - frontend
+      - db
+  db:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
 volumes:
   react_build:
+  postgres_data:
