@@ -16,8 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from django.conf.urls.static import static
+
+from . import settings
+
 urlpatterns = [
+    path('admin/', include('smuggler.urls')),  # before admin url patterns!
     path('admin/', admin.site.urls),
     path('', include('blog.urls', namespace='blog')),
     path('api/', include('blog_api.urls', namespace='blog_api')),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
