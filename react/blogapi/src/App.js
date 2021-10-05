@@ -12,7 +12,7 @@ function App() {
 
 	useEffect(() => {
 		setAppState({ loading: true });
-		const apiUrl = `http://www.marcioweb.com.br:8000/api/`;
+		const apiUrl = `http://204.48.16.104:8000/api/`;
 		fetch(apiUrl)
 			.then((data) => data.json())
 			.then((posts) => {
