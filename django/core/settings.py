@@ -133,7 +133,7 @@ REST_FRAMEWORK = {
 
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
-    "http://localhost:3000"
-    "http://204.48.16.104:8000/api/"
-    "http://marcioweb.com.br"
+    "http://localhost:3000",
+    "http://204.48.16.104:8000/api",
+    "http://marcioweb.com.br",
 ]
