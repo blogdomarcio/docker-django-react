@@ -15,10 +15,14 @@ from pathlib import Path
 
 import os
 
-APP_ROOT = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+APP_ROOT = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
+
+STATIC_ROOT = os.path.join(APP_ROOT, 'static')
+
+STATIC_URL = '/static/'
 
 
 # Quick-start development settings - unsuitable for production
@@ -142,6 +146,8 @@ USE_TZ = True
 
 MEDIA_URL = "/media/"
 
+MEDIA_ROOT = os.path.join(APP_ROOT, '/fotos/')
+
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
@@ -157,18 +163,3 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# STATIC_ROOT = os.path.join(BASE_DIR, '/django/static/')
-# STATIC_URL = '/django/static/'
-
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, "static"),
-# )
-
-# STATIC_URL = '/static/'
-
-STATIC_URL = 'static'
-
-MEDIA_ROOT = os.path.join(APP_ROOT, '/fotos/')
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
